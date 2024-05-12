@@ -1,0 +1,7 @@
+.env
+
+# Not needed, we use build results in /dist
+uimodule/webapp/
+
+# CF will install dependencies on its own
+node_modules/

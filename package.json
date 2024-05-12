@@ -1,0 +1,42 @@
+{
+	"name": "de.linktwo.facerec",
+	"version": "1.0.0",
+	"description": "Facial Emotion Recognition with NodeJS, SAPUI5 and Amazon Rekognition",
+	"main": "index.js",
+	"type": "module",
+	"author": "Eike Bergmann <eike.bergmann@linktwo.de>",
+
+	"license": "Apache-2.0",
+	"scripts": {
+		"clean": "rimraf dist coverage",
+		"start": "node index.js",
+		"build:ui": "ui5 build --dest ./uimodule/dist --clean-dest",
+		"build:ui-opt": "ui5 build self-contained --dest ./uimodule/dist --clean-dest --all",
+		"start:ui": "ui5 serve --port 8080 -o index.html",
+		"start:ui-cdn": "ui5 serve --port 8080 -o index-cdn.html",
+		"start:ui-dist": "npm start -- --config ui5-dist.yaml",
+		"start:ui-dist-cdn": "npm run start-cdn -- --config ui5-dist.yaml",
+		"lint:ui": "eslint uimodule/webapp"
+	},
+	"devDependencies": {
+		"@ui5/cli": "^3.6.1",
+		"@ui5/middleware-code-coverage": "^1.1.0",
+		"@wdio/cli": "^8.36.1",
+		"@wdio/local-runner": "^8.36.1",
+		"@wdio/mocha-framework": "^8.36.1",
+		"@wdio/spec-reporter": "^8.36.1",
+		"eslint": "^8.50.0",
+		"karma": "^6.4.2",
+		"karma-chrome-launcher": "^3.2.0",
+		"karma-coverage": "^2.2.1",
+		"karma-ui5": "^3.0.3",
+		"rimraf": "^5.0.5",
+		"ui5-middleware-livereload": "^3.0.1",
+		"wdio-ui5-service": "^2.0.7"
+	},
+	"dependencies": {
+		"@aws-sdk/client-rekognition": "^3.574.0",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2"
+	}
+}

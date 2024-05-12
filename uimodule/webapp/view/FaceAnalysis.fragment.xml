@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <Panel headerText="{app>title}">
+    <List items="{app>items}">
+      <DisplayListItem label="{app>Label}"
+        value="{app>Value}" />
+    </List>
+    <layoutData>
+      <FlexItemData minWidth="300px"
+        maxWidth="600px"
+        styleClass="sapUiSmallMarginBottom" />
+    </layoutData>
+  </Panel>
+</core:FragmentDefinition>

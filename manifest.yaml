@@ -1,0 +1,6 @@
+---
+applications:
+  - name: facial-emotion-recognition
+    buildpacks:
+      - nodejs_buildpack
+    memory: 512M

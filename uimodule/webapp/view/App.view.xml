@@ -1,0 +1,47 @@
+<mvc:View controllerName="de.linktwo.facerec.controller.App"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  core:require="{
+		formatMessage: 'sap/base/strings/formatMessage'
+	}">
+  <App>
+    <Page title="{i18n>appTitle}"
+      class="sapUiContentPadding">
+      <content>
+        <!-- Camera Feed -->
+        <FlexBox direction="Column"
+          alignItems="Center">
+          <Panel>
+            <core:HTML content="&lt;div class='camera-container'&gt;&lt;video id='camera' width='100%' autoplay /&gt;&lt;/div&gt;"></core:HTML>
+            <HBox alignItems="Center">
+              <Button enabled="{= ${app>/IsIntervalSet} === false}"
+                press="onStart"
+                text="{i18n>start}"
+                icon="sap-icon://play"
+                class="sapUiTinyMarginEnd" />
+              <Button enabled="{app>/IsIntervalSet}"
+                press="onStop"
+                text="{i18n>stop}"
+                icon="sap-icon://stop"
+                class="sapUiSmallMarginEnd" />
+              <Text text="{ parts: [ 'i18n>text.snapshotInterval', 'app>/SnapshotInterval' ], formatter: '.formatMessage' }ms" />
+            </HBox>
+            <layoutData>
+              <FlexItemData maxWidth="800px"
+                styleClass="sapUiSmallMarginBottom" />
+            </layoutData>
+          </Panel>
+        </FlexBox>
+
+        <!-- Facial Analysis Panels -->
+        <FlexBox id="faces-container"
+          direction="Column"
+          alignItems="Center">
+
+        </FlexBox>
+      </content>
+    </Page>
+  </App>
+</mvc:View>

@@ -1,0 +1,40 @@
+.camera-container {
+	position: relative;
+}
+
+.face-boundingbox {
+	position: absolute;
+	box-shadow:
+		0 0 1px #3184c2,
+		0 0 2px #3184c2,
+		0 0 2px #3184c2,
+		0 0 2px #3184c2,
+		inset 0 0 2px #3184c2,
+		inset 0 0 2px #3184c2,
+		inset 0 0 2px #3184c2,
+		inset 0 0 2px #3184c2 !important;
+	border: 2px solid rgba(255, 255, 255, 0.69);
+	border-radius: 3%;
+}
+
+.face-boundingbox>span {
+	position: absolute;
+	top: -21px;
+	color: white;
+}
+
+.face-landmark {
+	position: absolute;
+	box-shadow:
+		0 0 1px white,
+		0 0 2px white,
+		0 0 2px white,
+		0 0 2px white,
+		inset 0 0 2px white,
+		inset 0 0 2px white,
+		inset 0 0 2px white,
+		inset 0 0 1px white !important;
+	border-radius: 1%;
+	width: 1px;
+	height: 1px;
+}

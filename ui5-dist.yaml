@@ -1,0 +1,15 @@
+specVersion: "3.0"
+metadata:
+  name: de.linktwo.facerec
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: uimodule/dist
+framework:
+  name: OpenUI5
+  version: "1.123.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
